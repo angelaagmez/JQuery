@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="exercise-04.js"></script>
+
+    <style>
+        h1 {
+            background-color: lightblue;
+            height: 83px;
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        div {
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+        }
+
+        div.section {
+            background-color: lightgreen;
+            height: 212px;
+        }
+
+        div.result {
+            background-color: lightpink;
+            border: 2px solid pink;
+            box-shadow: 0px 10px 24px gray;
+            border-radius: 15px;
+        }
+
+        p {
+            margin: 25px auto;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Header</h1>
+    <div class="section">This is the main section</div>
+    <div class="result">
+        <p>Header width: <span id="header-width">XX</span>px</p>
+        <p>Main section width: <span id="main-section-width">XX</span>px</p>
+    </div>
+</body>
+</html>
