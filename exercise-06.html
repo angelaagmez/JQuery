@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("button").click(function() {
+        $(this).siblings().toggle();
+         });
+    });
+    </script>
+    <style>
+        .page {
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        h1 {
+            background-color: lightcoral;
+            height: 100px;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        div.section {
+            background-color: lightgreen;
+            height: 212px;
+        }
+
+        div.section p {
+            border: 1px solid black;
+        }
+
+        #articles {
+            background-color: lightblue;
+        }
+
+        #articles > div {
+            display: flex;
+        }
+
+        .article {
+            width: 100%;
+        }
+
+        div:nth-of-type(even) > div.article {
+            background-color: white;
+        }
+
+        div:nth-of-type(odd) > div.article {
+            background-color: gainsboro;
+        }
+
+        #footer {
+            background-color: lightgoldenrodyellow;
+        }
+
+        p {
+            margin: 25px auto;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Cabecera</h1>
+
+        <div id="articles">
+            <p>Artículos</p>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 1</div>
+            </div>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 2</div>
+            </div>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 3</div>
+            </div>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 4</div>
+            </div>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 5</div>
+            </div>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 6</div>
+            </div>
+            <div>
+                <button>Open/Close</button>
+                <div class="article">Artículo 7</div>
+            </div>
+        </div>
+
+        <div id="footer">Pie de página</div>
+    </div>
+</body>
+
+</html>
