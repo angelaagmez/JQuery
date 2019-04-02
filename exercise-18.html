@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+         $(document).ready(function () {
+            $("#btn-add").click(function(){
+                $("#percentage").animate({
+                    "width":"100%",
+                    "border-radius":"20px",
+                }, 3000, function(){
+                    console.log("Mensaje log")
+                });
+            });
+            $("#btn-rem").click(function(){
+                $("#percentage").animate({
+                    "width":"1%",
+                    "border-radius":"20px",
+                }, 3000, function(){
+                    console.log("Mensaje log")
+                });
+            });
+            $("#btn-stop").click(function(){
+                $("#percentage").stop();
+                console.log("Mensaje log")
+            });
+        });
+    </script>
+    <style>
+        .page {
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        h1 {
+            background-color: lightcoral;
+            height: 100px;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        #content {
+            background-color: lightblue;
+        }
+
+        #percentage {
+            background-color: blueviolet;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            height: 50px;
+            width: 1%;
+        }
+
+        #footer {
+            background-color: lightgoldenrodyellow;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Cabecera</h1>
+
+        <div id="content">
+            <div id="percentage"></div>
+            <div>
+                <button id="btn-add">To 100%</button>
+                <button id="btn-rem">To 1%</button>
+                <button id="btn-stop">Stop</button>
+            </div>
+        </div>
+
+        <div id="footer">Pie de página</div>
+    </div>
+</body>
+
+</html>

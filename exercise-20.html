@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $("#btn-get-name").click(function(){
+                alert("Text: " + $("#name").text());
+            });
+            $("#btn-get-info").click(function(){
+                alert("HTML: " + $("#info").html());
+            });
+            $("#btn-get-email").click(function(){
+                alert($("#inp-email").val());
+            });
+         });
+    </script>
+    <style>
+        .page {
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        h1 {
+            background-color: lightcoral;
+            height: 100px;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        #content {
+            background-color: lightblue;
+        }
+
+        #footer {
+            background-color: lightgoldenrodyellow;
+        }
+
+        input {
+            width: 300px;
+            height: 23px;
+        }
+
+        #form-plus-info {
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+        }
+
+        #info {
+            background-color: bisque;
+            margin: 0px auto;
+            align-self: center;
+            border-radius: 15px;
+            box-shadow: 14px 10px 10px -2px gray;
+        }
+
+        #mybuttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #mybuttons>* {
+            flex: 1;
+            max-width: 200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Cabecera</h1>
+
+        <div id="content">
+            <form>
+                <fieldset>
+                    <legend>Completa el formulario:</legend>
+                    <div id="form-plus-info">
+                        <div id="form">
+                            <p id="name"><strong>Nombre</strong></p>
+                            <input id="inp-name" type="text">
+                            <p id="email"><strong>Email:</strong></p>
+                            <input id="inp-email" type="text" value="estoesunemail@servidor.com">
+                            <p id="birth-date">Fecha de nacimiento</p>
+                            <input id="inp-date" type="date"><br /><br />
+                            <input type="submit" value="Enviar"
+                                title="Como no tenemos un lugar al que enviar el contenido del formulario, cuando pulses en el botón, se limpiará el formulario.">
+                        </div>
+                        <div id="info">
+                            <strong>Rellena el formulario.</strong>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div id="mybuttons">
+            <button id="btn-get-name">Obtiene el valor del párrafo #name</button>
+            <button id="btn-get-info">Obtiene el código HTML de #info</button>
+            <button id="btn-get-email">Obtiene el valor del formulario del email</button>
+        </div>
+
+        <div id="footer">Pie de página</div>
+    </div>
+</body>
+
+</html>

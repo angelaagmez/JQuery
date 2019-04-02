@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+                 $(document).ready(function(){
+            $("#btn-translate-into-english").click(function(){
+                $("legend").text("Complete the form:")
+                $("#name").text("Name")
+                $("#birth-date").text("Birth date")
+                $("#info").text("Fill the form")
+                $("h1").text("Header")
+                $("input").text("Send")
+                $("#footer").text("Footer")
+                $("#btn-change-format").text("Change format")
+                $("#btn-default-values").text("Input values")
+                $("#btn-translate-into-english").text("Translate to English")
+                $("#email").text("Email")
+                $("#send ").val("Send")
+            });
+            $("#btn-change-format").click(function(){
+                $("legend").html("<b>Completa el formulario</b>")
+                $("#name").html("<b>Nombre</b>")
+                $("#birth-date").html("<b>Fecha de nacimiento</b>")
+                $("#info").html("<b>Rellena el formulario</b>")
+                $("h1").html("<b>Cabecera</b>")
+                $("input").html("<b></b>")
+                $("#footer").html("<b>Pie de página</b>")
+                $("#btn-change-format").html("<b>Cambiar formato</b>")
+                $("#btn-default-values").html("<b>Valores input</b>")
+                $("#btn-translate-into-english").html("<b>Traducir a inglés</b>")
+                $("#email").html("<b>Email</b>")
+                $("#send").css("font-weight", "bold");
+            });
+            $("#btn-default-values").click(function(){
+                $("#inp-name").val("Default-nombre")
+                $("#inp-email").val("correodefault@gmail.com")
+                $("#inp-date").val("2000-01-01")
+            });
+            
+        });
+    </script>
+    <style>
+        .page {
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        h1 {
+            background-color: lightcoral;
+            height: 100px;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        #content {
+            background-color: lightblue;
+        }
+
+        #footer {
+            background-color: lightgoldenrodyellow;
+        }
+
+        input {
+            width: 300px;
+            height: 23px;
+        }
+
+        #form-plus-info {
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+        }
+
+        #info {
+            background-color: bisque;
+            margin: 0px auto;
+            align-self: center;
+            border-radius: 15px;
+            box-shadow: 14px 10px 10px -2px gray;
+        }
+
+        #mybuttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #mybuttons>* {
+            flex: 1;
+            max-width: 200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Cabecera</h1>
+
+        <div id="content">
+            <form>
+                <fieldset>
+                    <legend>Completa el formulario:</legend>
+                    <div id="form-plus-info">
+                        <div id="form">
+                            <p id="name">Nombre</p>
+                            <input id="inp-name" type="text">
+                            <p id="email">Email:</p>
+                            <input id="inp-email" type="text">
+                            <p id="birth-date">Fecha de nacimiento</p>
+                            <input id="inp-date" type="date"><br /><br />
+                            <input type="submit" value="Enviar"
+                                title="Como no tenemos un lugar al que enviar el contenido del formulario, cuando pulses en el botón, se limpiará el formulario.">
+                        </div>
+                        <div id="info">
+                            Rellena el formulario.
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div id="mybuttons">
+            <button id="btn-translate-into-english">Traducir a inglés</button>
+            <button id="btn-change-format">Cambiar formato</button>
+            <button id="btn-default-values">Valores de input</button>
+
+        </div>
+
+        <div id="footer">Pie de página</div>
+    </div>
+</body>
+
+</html>

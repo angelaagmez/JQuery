@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Where the CDN for jquery is?? -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        /* Dont u miss anything in here?? */
+    $(document).ready(function () {
+        $("#btn-add-product").click(function() {
+            $("#table-product").append(
+                "<tr><td>"  + $("#product").val() +
+                "</td><td>" + $("#unit-price").val() +
+                "</td><td>" + $("#amount").val() +
+                "</td><td>" + $("#total").val() +
+                "</td></tr>");
+        });
+    });
+    </script>
+    <style>
+        .page {
+            margin: 20px auto;
+            width: 60%;
+        }
+
+        h1 {
+            background-color: lightcoral;
+            height: 100px;
+        }
+
+        div {
+            padding: 20px;
+        }
+
+        #content {
+            background-color: lightblue;
+        }
+
+        #footer {
+            background-color: lightgoldenrodyellow;
+        }
+
+        #form-content {
+            background-color: lightgreen;
+        }
+
+        #form-plus-buttons {
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+        }
+
+        #form {
+            flex: 1;
+        }
+
+        #form-buttons {
+            align-self: center;
+            justify-self: center;
+            flex: 3;
+        }
+
+
+        th,
+        td {
+            min-width: 200px;
+            border: 1px solid black;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <h1>Cabecera</h1>
+
+        <div id="form-content">
+            <fieldset>
+                <legend>Insertar producto:</legend>
+                <div id="form-plus-buttons">
+                    <div id="form">
+                        <form>
+                            <p>Producto</p>
+                            <input id="product" type="text">
+                            <p>Precio por unidad</p>
+                            <input id="unit-price" type="text">
+                            <p>Cantidad</p>
+                            <input id="amount" type="text">
+                            <p>Total</p>
+                            <input id="total" type="text">
+                        </form>
+                    </div>
+                    <div id="form-buttons">
+                        <button id="btn-add-product">Añadir producto</button>
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div id="content">
+            <table id="table-product">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio unidad</th>
+                    <th>Unidades</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Altavoz Bluetooth</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>10</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="footer">Pie de página</div>
+    </div>
+</body>
+
+</html>
