@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo Factura</title>
+    <style>
+        body {
+            position: absolute;
+            top: 150px;
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            background-color: grey;
+        }
+
+        th {
+            border: 1px solid black;
+            background-color: darkseagreen;
+        }
+
+        div,
+        #articulos {
+            position: fixed;
+            top: 50%;
+            bottom: 0%;
+        }
+
+        div,
+        #datos {
+            position: absolute;
+            top: 0%;
+            bottom: 50%;
+        }
+
+        #button {
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            width: 20%;
+            height: 10%;
+            background-color: rgb(12, 83, 43);
+            color: white;
+            font-size: 130%;
+        }
+        div, #final{
+            position: fixed;
+            top: 70%
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                var iva = 0;
+                var total = 0;
+                $("#total").each(function () {
+                    var preciou = 0;
+                    var unidades = 0;
+                    var total = 0;
+                    unidades = $("#cantidad").val();
+                    preciou = $("#precio").val();
+                    total = preciou * unidades;
+                    $(this).val(total + " €");
+                });
+                $("#total2").each(function () {
+                    var preciou2 = 0;
+                    var unidades2 = 0;
+                    var total2 = 0;
+                    unidades2 = $("#cantidad2").val();
+                    preciou2 = $("#precio2").val();
+                    total2 = preciou2 * unidades2;
+                    $(this).val(total2 + " €");
+                });
+                $("#total3").each(function () {
+                    var preciou3 = 0;
+                    var unidades3 = 0;
+                    var total3 = 0;
+                    unidades3 = $("#cantidad3").val();
+                    preciou3 = $("#precio3").val();
+                    total3 = preciou3 * unidades3;
+                    $(this).val(total3 + " €");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="articulos">
+        <table>
+            <tr>
+                <th>Artículo</th>
+                <th>Precio por unidad</th>
+                <th>Unidades</th>
+                <th>Precio total</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="articulo" value=" "></td>
+                <td><input type="text" id="precio" value="0"></td>
+                <td><input type="text" id="cantidad" value="0"></td>
+                <td><input type="text" id="total" value="0"></td>
+            </tr>
+            <tr>
+                    <td><input type="text" id="articulo2" value=" "></td>
+                    <td><input type="text" id="precio2" value="0"></td>
+                    <td><input type="text" id="cantidad2" value="0"></td>
+                    <td><input type="text" id="total2" value="0"></td>
+            </tr>
+            <tr>
+                    <td><input type="text" id="articulo3" value=" "></td>
+                    <td><input type="text" id="precio3" value="0"></td>
+                    <td><input type="text" id="cantidad3" value="0"></td>
+                    <td><input type="text" id="total3" value="0"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="datos">
+        <table>
+            <th>DATOS PERSONALES:</th>
+            <tr>
+                <th id="nombre">Nombre: <input type="text" value=" " size="70%"></th>
+            </tr>
+            <tr>
+                <th id="telefono">Teléfono: <input type="text" value=" " size="70%"></th>
+            </tr>
+            <tr>
+                <th id="dni">DNI: <input type="text" value=" " size="70%"></th>
+            </tr>
+            <tr>
+                <th id="direccion">Dirección: <input type="text" value=" " size="70%"></th>
+            </tr>
+        </table>
+    </div>
+    
+    <div><button id="button">Calcular factura</button></div>
+    
+</body>
+</html>
